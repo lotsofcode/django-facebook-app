@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <p>Hi {{me.first_name}}</p>
+
+        <blockquote>"{{quote}}"</blockquote>
+
+        <form method="POST" action="{% url update_status %}"  >
+            <input type="hidden" name="quote" value="{{quote}}" />
+            <input type="hidden" name="access_token" value="{{access_token}}" />
+            <input type="submit" value="Set as my status!"/>
+        </form>
+
+    </body>
+</html>
